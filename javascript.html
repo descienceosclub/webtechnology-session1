@@ -1,0 +1,237 @@
+<script>
+  //In JavaScript, numbers can be either integers or floating - point numbers.
+
+  let age = 25; // Integer
+  let price = 99.99; // Floating-point number
+
+  console.log(age); // Output: 25
+  console.log(price); // Output: 99.99
+
+  //Strings
+
+  let firstName = "John"; // Double quotes
+  let lastName = "Doe"; // Single quotes
+  let greeting = `Hello, ${firstName} ${lastName}!`; // Template literals
+
+  console.log(firstName); // Output: John
+  console.log(greeting); // Output: Hello, John Doe!
+
+  //Booleans
+
+  let isLoggedIn = true; // Boolean true
+  let isAdmin = false; // Boolean false
+
+  console.log(isLoggedIn); // Output: true
+  console.log(isAdmin); // Output: false
+
+  //Objects
+
+  let person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 30,
+    isAdmin: false,
+  };
+
+  console.log(person.firstName); // Output: John
+  console.log(person.age); // Output: 30
+
+  //Arrays
+
+  let fruits = ["Apple", "Banana", "Cherry"];
+
+  console.log(fruits[0]); // Output: Apple
+  console.log(fruits[2]); // Output: Cherry
+
+  //Example with All Data Types:
+
+  let number = 42; // Number
+  let string = "Hello, World!"; // String
+  let isHappy = true; // Boolean
+  let car = { make: "Toyota", year: 2020 }; // Object
+  let colors = ["Red", "Green", "Blue"]; // Array
+
+  console.log(number); // Output: 42
+  console.log(string); // Output: Hello, World!
+  console.log(isHappy); // Output: true
+  console.log(car.make); // Output: Toyota
+  console.log(colors[1]); // Output: Green
+
+  //1. String Methods
+
+  let str = "Hello, JavaScript!";
+
+  // 1. length: Returns the length of the string.
+  console.log(str.length); // Output: 17
+
+  // 2. charAt(index): Returns the character at the specified index.
+  console.log(str.charAt(0)); // Output: H
+
+  // 3. indexOf(substring): Returns the index of the first occurrence of the specified substring.
+  console.log(str.indexOf("JavaScript")); // Output: 7
+
+  // 4. toUpperCase(): Converts the string to uppercase.
+  console.log(str.toUpperCase()); // Output: HELLO, JAVASCRIPT!
+
+  // 5. toLowerCase(): Converts the string to lowercase.
+  console.log(str.toLowerCase()); // Output: hello, javascript!
+
+  // 6. slice(start, end): Extracts a section of the string from start to end.
+  console.log(str.slice(0, 5)); // Output: Hello
+
+  // 7. substring(start, end): Similar to slice but does not accept negative values.
+  console.log(str.substring(0, 5)); // Output: Hello
+
+  // 8. replace(searchValue, newValue): Replaces the specified value with another value.
+  console.log(str.replace("JavaScript", "World")); // Output: Hello, World!
+
+  // 9. split(separator): Splits the string into an array of substrings.
+  console.log(str.split(" ")); // Output: ["Hello,", "JavaScript!"]
+
+  //2. Number Methods
+  let num = 12345.6789;
+
+  // 1. toString(): Converts the number to a string.
+  console.log(num.toString()); // Output: "12345.6789"
+
+  // 2. toFixed(digits): Formats the number to a fixed number of decimal places.
+  console.log(num.toFixed(2)); // Output: "12345.68"
+
+  // 3. toPrecision(significantDigits): Formats the number to the specified length.
+  console.log(num.toPrecision(5)); // Output: "12346"
+
+  // 4. parseInt(string): Converts a string to an integer.
+  console.log(parseInt("123")); // Output: 123
+
+  // 5. parseFloat(string): Converts a string to a floating-point number.
+  console.log(parseFloat("123.45")); // Output: 123.45
+
+  //3. Array Methods
+
+  let arr = [1, 2, 3, 4, 5];
+
+  // 1. length: Returns the length of the array.
+  console.log(arr.length); // Output: 5
+
+  // 2. push(element): Adds an element to the end of the array.
+  arr.push(6);
+  console.log(arr); // Output: [1, 2, 3, 4, 5, 6]
+
+  // 3. pop(): Removes the last element from the array.
+  arr.pop();
+  console.log(arr); // Output: [1, 2, 3, 4, 5]
+
+  // 4. shift(): Removes the first element from the array.
+  arr.shift();
+  console.log(arr); // Output: [2, 3, 4, 5]
+
+  // 5. unshift(element): Adds an element to the beginning of the array.
+  arr.unshift(1);
+  console.log(arr); // Output: [1, 2, 3, 4, 5]
+
+  // 6. join(separator): Joins all elements of the array into a string, separated by the specified separator.
+  console.log(arr.join("-")); // Output: "1-2-3-4-5"
+
+  // 7. indexOf(element): Returns the first index of the element in the array.
+  console.log(arr.indexOf(3)); // Output: 2
+
+  // 8. slice(start, end): Returns a portion of the array from start to end.
+  let slicedArr = arr.slice(1, 3);
+  console.log(slicedArr); // Output: [2, 3]
+
+  // 9. splice(start, deleteCount, item1, item2, ...): Adds/removes items to/from the array.
+  arr.splice(2, 1, 10); // Remove 1 element at index 2 and insert 10
+  console.log(arr); // Output: [1, 2, 10, 4, 5]
+
+  //4. Date Methods
+
+  let date = new Date(); // Current date and time
+
+  // 1. getFullYear(): Returns the year of the date.
+  console.log(date.getFullYear()); // Output: (current year)
+
+  // 2. getMonth(): Returns the month (0-11).
+  console.log(date.getMonth()); // Output: (current month, 0-based index)
+
+  // 3. getDate(): Returns the day of the month (1-31).
+  console.log(date.getDate()); // Output: (current day of the month)
+
+  // 4. getHours(): Returns the hour (0-23).
+  console.log(date.getHours()); // Output: (current hour)
+
+  // 5. getMinutes(): Returns the minutes (0-59).
+  console.log(date.getMinutes()); // Output: (current minutes)
+
+  // 6. getSeconds(): Returns the seconds (0-59).
+  console.log(date.getSeconds()); // Output: (current seconds)
+
+  // 7. setFullYear(year): Sets the year of the date.
+  date.setFullYear(2025);
+  console.log(date); // Output: Updated year to 2025
+
+  // 8. setMonth(month): Sets the month (0-11).
+  date.setMonth(11); // December
+  console.log(date); // Output: Updated month to December
+
+  // 9. setDate(day): Sets the day of the month (1-31).
+  date.setDate(25); // Christmas!
+  console.log(date); // Output: Updated day to 25th
+
+  // 10. setHours(hours): Sets the hour of the date (0-23).
+  date.setHours(14); // 2:00 PM
+  console.log(date); // Output: Updated hour to 14:00
+
+  // 11. setMinutes(minutes): Sets the minutes (0-59).
+  date.setMinutes(30);
+  console.log(date); // Output: Updated minutes to 30
+
+  // 12. setSeconds(seconds): Sets the seconds (0-59).
+  date.setSeconds(0);
+  console.log(date); // Output: Updated seconds to 0
+
+  //   Regular Expression Syntax
+
+  //     Literals: Exact characters you're searching for, e.g., /abc/ will match the exact string "abc".
+  //     Metacharacters: Special characters that allow for more flexible matches.
+  //         .: Matches any character except newlines.
+  //         ^: Matches the start of a string.
+  //         $: Matches the end of a string.
+  //         []: Character sets. E.g., [abc] matches "a", "b", or "c".
+  //         \d: Matches any digit (equivalent to [0-9]).
+  //         \w: Matches any word character (alphanumeric or underscore).
+  //         \s: Matches any whitespace character.
+  //         *: Matches 0 or more of the preceding element.
+  //         +: Matches 1 or more of the preceding element.
+  //         ?: Matches 0 or 1 of the preceding element.
+
+  //2. Example: Validating Email Addresses
+  let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+  let email1 = "test@example.com";
+  let email2 = "invalid-email";
+
+  console.log(emailPattern.test(email1)); // Output: true (valid email)
+  console.log(emailPattern.test(email2)); // Output: false (invalid email)
+
+  //3. Example: Searching for Specific Patterns
+
+  let text = "The rain in Spain stays mainly in the plain.";
+  let pattern = /ain/g; // 'g' flag for global search
+
+  let matches = text.match(pattern);
+  console.log(matches); // Output: ["ain", "ain", "ain"]
+
+  //4. Example: Replacing Parts of a String
+  let sentence = "I love JavaScript. JavaScript is awesome!";
+  let replaced = sentence.replace(/JavaScript/g, "JS");
+
+  console.log(replaced); // Output: I love JS. JS is awesome!
+
+  //5. Example: Extracting Substrings
+
+  let logEntry = "User: JohnDoe, Action: Login, Date: 2024-10-04";
+  let datePattern = /\d{4}-\d{2}-\d{2}/;
+
+  date = logEntry.match(datePattern);
+  console.log(date[0]); // Output: 2024-10-04
+</script>

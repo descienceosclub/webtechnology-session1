@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <form id="myForm">
+      Name: <input type="text" id="nameInput" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <script>
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent form from submitting
+          const name = document.getElementById("nameInput").value;
+          alert("Form submitted with name: " + name);
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="hoverMe">Hover over me!</p>
+
+    <script>
+      const pElement = document.getElementById("hoverMe");
+
+      pElement.addEventListener("mouseover", function () {
+        pElement.style.color = "blue";
+      });
+
+      pElement.addEventListener("mouseout", function () {
+        pElement.style.color = "black";
+      });
+    </script>
+  </body>
+</html>

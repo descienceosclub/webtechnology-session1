@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First Web Page</title>
+  </head>
+  <body>
+    <h1>Welcome to my website!</h1>
+    <p>This is a paragraph.</p>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+    </ul>
+    <img src="image.jpg" alt="A beautiful image" />
+    <script>
+      let name = "John"; // String
+      let age = 30; // Number
+      let isStudent = true; // Boolean
+      let hobbies = ["reading", "gaming"]; // Array
+      //   let person = { name: "Alice", age: 25 }; // Object
+
+      let x = 5;
+      let y = 10;
+
+      let sum = x + y; // Addition
+      let difference = x - y; // Subtraction
+      let product = x * y; // Multiplication
+      let quotient = x / y; // Division
+      let remainder = x % y; // Modulus
+
+      if (age >= 18) {
+        console.log("You are an adult.");
+      } else {
+        console.log("You are a minor.");
+      }
+
+      for (let i = 0; i < 5; i++) {
+        console.log(i);
+      }
+
+      function greet(name) {
+        console.log("Hello, " + name + "!");
+      }
+
+      greet("Alice");
+
+      let element = document.getElementById("my-element");
+      element.textContent = "New content";
+      element.style.color = "red";
+
+      let person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 30,
+        greet: function () {
+          console.log(
+            "Hello, my name is " + this.firstName + " " + this.lastName
+          );
+        },
+      };
+
+      person.greet();
+
+      let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      let isValidEmail = emailRegex.test("john@example.com");
+    </script>
+  </body>
+</html>
